@@ -1,3 +1,6 @@
+//Exercício 04 - Scanner
+//Crie um programa que utilize a classe Scanner para ler dados do usuário.
+
 import java.util.Scanner;
 
 public class Ex04_Scanner {

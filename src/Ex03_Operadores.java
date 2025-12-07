@@ -1,3 +1,6 @@
+//Exercício 03 - Operadores
+//Crie um programa que demonstre o uso de operadores aritméticos, de comparação e lógicos em Java.
+
 public class Ex03_Operadores {
     
         public static void main(String[] args) {
