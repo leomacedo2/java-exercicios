@@ -1,8 +1,0 @@
-// Coloque as suas associações de teclas neste arquivo para substituir os padrões
-[
-    {
-        "key": "alt+x",
-        "command": "workbench.action.tasks.runTask",
-        "args": "Run Current Java File"
-    }
-]

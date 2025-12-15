@@ -9,15 +9,36 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "presentation": {
-                "echo": false,
-                "reveal": "always",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": false,
-                "clear": true
+            "presentation": { 
+                "echo": false, 
+                "reveal": "always", 
+                "focus": false, 
+                "panel": "shared", 
+                "showReuseMessage": false, 
+                "clear": true 
+            }, 
+        "problemMatcher": [] 
+        },
+
+        {
+            "label": "Run Java POO",
+            "type": "shell",
+            "command": "javac -d bin src\\Ex11_POO\\*.java && java -cp bin Ex11_POO.Ex11_POO",
+            "group": {
+                "kind": "build",
+                "isDefault": true
             },
-            "problemMatcher": []
+            "presentation": { 
+                "echo": false, 
+                "reveal": "always", 
+                "focus": false, 
+                "panel": "shared", 
+                "showReuseMessage": false, 
+                "clear": true 
+            }, 
+        "problemMatcher": [] 
         }
-    ]
-}
+    ] 
+} 
+
+
