@@ -4,18 +4,32 @@
 package Ex11_POO;
 
 public class Pessoa {
-    String nome;
-    int idade;
+    private String nome;
+    private int idade;
+
+    // Construtor
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
 
     // Métodos
-    void exibirDados() {
+    public void exibirDados() {
         System.out.println("Nome: " + nome);
         System.out.println("Idade: " + idade);
     }
 
-    void fazerAniversario() {
+    public void fazerAniversario() {
         idade++;
         System.out.println("Feliz aniversário, " + nome + "! Agora você tem " + idade + " anos.");
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getIdade() {
+        return idade;
     }
 
 }
