@@ -13,17 +13,19 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    // Métodos
+    // Método para exibir os dados da pessoa
     public void exibirDados() {
         System.out.println("Nome: " + nome);
         System.out.println("Idade: " + idade);
     }
 
+    // Método para fazer aniversário (incrementa a idade)
     public void fazerAniversario() {
         idade++;
         System.out.println("Feliz aniversário, " + nome + "! Agora você tem " + idade + " anos.");
     }
 
+    // Getters
     public String getNome() {
         return nome;
     }
