@@ -11,6 +11,9 @@ public class Pessoa {
     public Pessoa(String nome, int idade) {
         this.nome = nome;
         this.idade = idade;
+        if (nome == null || nome.trim().isEmpty()) {
+            this.nome = "Desconhecido"; // Nome padrão se inválido
+        }
         if (idade < 0) {
             this.idade = 0; // Garantir que a idade não seja negativa
         }
@@ -42,4 +45,24 @@ public class Pessoa {
         return idade;
     }
 
+    // Set para nomes
+    public void setNome(String nome) {
+        if (nome == null || nome.trim().isEmpty()) {
+            System.out.println("Nome inválido. O nome não foi alterado.");
+            return;
+        }
+        if (nome.length() > 50) {
+            System.out.println("Nome muito longo. O nome não foi alterado.");
+            return;
+        }
+        if (nome.matches(".*\\d.*")) {
+            System.out.println("Nome não pode conter números. O nome não foi alterado.");
+            return;
+        }
+        if (nome.matches(".*[!@#$%^&*(),.?\":{}|<>].*")) {
+            System.out.println("Nome não pode conter caracteres especiais. O nome não foi alterado.");
+            return;
+        }
+        this.nome = nome;
+    }
 }

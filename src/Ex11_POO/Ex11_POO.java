@@ -39,6 +39,16 @@ public class Ex11_POO {
         // Apresentando as pessoas
         System.out.println(pessoa1.apresentar());
         System.out.println(pessoa2.apresentar());
+
+        // Testando o setNome
+        pessoa1.setNome("Leonardo");
+        System.out.println("Nome alterado da pessoa 1: " + pessoa1.getNome());
+        pessoa2.setNome(""); // Nome inválido
+        System.out.println("Nome da pessoa 2 após tentativa de alteração: " + pessoa2.getNome());
+
+        System.out.println();
+        System.out.println(pessoa1.apresentar());
+        System.out.println(pessoa2.apresentar());
     }
 }
 
