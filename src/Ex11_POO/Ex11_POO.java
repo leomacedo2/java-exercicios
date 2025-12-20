@@ -41,10 +41,15 @@ public class Ex11_POO {
         System.out.println(pessoa2.apresentar());
 
         // Testando o setNome
-        pessoa1.setNome("Leonardo");
-        System.out.println("Nome alterado da pessoa 1: " + pessoa1.getNome());
-        pessoa2.setNome(""); // Nome inválido
-        System.out.println("Nome da pessoa 2 após tentativa de alteração: " + pessoa2.getNome());
+        boolean nomeAlterado = pessoa1.setNome("Carlos123"); // Nome inválido
+        if (!nomeAlterado) {
+            System.out.println("Falha ao alterar o nome de pessoa1.");
+        }
+
+        nomeAlterado = pessoa1.setNome("Carlos"); // Nome válido
+        if (nomeAlterado) {
+            System.out.println("Nome alterado com sucesso para pessoa1.");
+        }
 
         System.out.println();
         System.out.println(pessoa1.apresentar());

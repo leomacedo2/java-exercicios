@@ -46,23 +46,20 @@ public class Pessoa {
     }
 
     // Set para nomes
-    public void setNome(String nome) {
+    public boolean setNome(String nome) {
         if (nome == null || nome.trim().isEmpty()) {
-            System.out.println("Nome inválido. O nome não foi alterado.");
-            return;
+            return false;
         }
         if (nome.length() > 50) {
-            System.out.println("Nome muito longo. O nome não foi alterado.");
-            return;
+            return false;
         }
         if (nome.matches(".*\\d.*")) {
-            System.out.println("Nome não pode conter números. O nome não foi alterado.");
-            return;
+            return false;
         }
         if (nome.matches(".*[!@#$%^&*(),.?\":{}|<>].*")) {
-            System.out.println("Nome não pode conter caracteres especiais. O nome não foi alterado.");
-            return;
+            return false;
         }
         this.nome = nome;
+        return true;
     }
 }
