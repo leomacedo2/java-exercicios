@@ -19,11 +19,13 @@ public class Pessoa {
         }
     }
 
-    // Método para exibir os dados da pessoa
-    public void exibirDados() {
-        System.out.println("Nome: " + nome);
-        System.out.println("Idade: " + idade);
-    }
+    @Override
+    public String toString() {
+    return "Pessoa{" +
+           "nome='" + nome + '\'' +
+           ", idade=" + idade +
+           '}';
+    }   
 
     // Método para fazer aniversário (incrementa a idade)
     public void fazerAniversario() {

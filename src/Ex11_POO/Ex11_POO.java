@@ -13,9 +13,9 @@ public class Ex11_POO {
 
 
         // Exibindo os dados da pessoa
-        pessoa1.exibirDados();
+        System.out.println(pessoa1);
         System.out.println();
-        pessoa2.exibirDados();
+        System.out.println(pessoa2);
         System.out.println();
 
         // Fazendo aniversário
@@ -23,7 +23,7 @@ public class Ex11_POO {
         System.out.println();
 
         // Exibindo os dados novamente
-        pessoa1.exibirDados();
+        System.out.println(pessoa1);
         System.out.println();
 
         System.out.println("Nome da pessoa 1: " + pessoa1.getNome());
@@ -52,6 +52,7 @@ public class Ex11_POO {
         }
 
         System.out.println();
+        System.out.println(pessoa1);
         System.out.println(pessoa1.apresentar());
         System.out.println(pessoa2.apresentar());
     }
