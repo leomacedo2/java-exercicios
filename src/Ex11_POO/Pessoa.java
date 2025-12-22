@@ -19,6 +19,7 @@ public class Pessoa {
         }
     }
 
+    // Método toString para representação textual do objeto
     @Override
     public String toString() {
     return "Pessoa{" +
