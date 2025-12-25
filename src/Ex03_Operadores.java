@@ -12,6 +12,8 @@ public class Ex03_Operadores {
         int multiplicacao = a * b;
         int divisao = a / b;
 
+        System.out.println();
+        System.out.println();
         System.out.println("Operadores Aritméticos:");
         System.out.println("Soma: " + soma);
         System.out.println("Subtração: " + subtracao);

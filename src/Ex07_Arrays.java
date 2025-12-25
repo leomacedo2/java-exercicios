@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class Ex07_Arrays {
     public static void main(String[] args) {
+        System.out.println();
+        System.out.println();
         Scanner scanner = new Scanner(System.in);
 
         // Solicitando ao usuário a quantidade de números a serem armazenados no array com validação

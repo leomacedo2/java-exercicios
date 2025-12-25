@@ -105,6 +105,8 @@ public class Ex10_Arrays2D {
 
     public static void main(String[] args) {
 
+        System.out.println();
+        System.out.println();
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
 

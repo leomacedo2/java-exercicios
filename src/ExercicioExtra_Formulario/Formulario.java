@@ -8,6 +8,9 @@ import java.awt.event.ActionListener;
 public class Formulario {
 
     public static void main(String[] args) {
+        System.out.println();
+        System.out.println();
+        
         JFrame frame = new JFrame("Formulário de Pessoa");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(350, 250);

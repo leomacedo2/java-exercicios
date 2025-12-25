@@ -46,6 +46,8 @@ public class Ex09_Strings {
     }
 
     public static void main(String[] args) {
+        System.out.println();
+        System.out.println();
 
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;

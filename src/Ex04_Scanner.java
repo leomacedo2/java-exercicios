@@ -5,11 +5,12 @@ import java.util.Scanner;
 
 public class Ex04_Scanner {
     public static void main(String[] args) {
+    System.out.println();
+    System.out.println();
     Scanner scanner = new Scanner(System.in);
 
     int opcao = 0;
     while  (opcao != 4) {
-        System.out.println();
         System.out.println("===== Menu de Opções =====");
         System.out.println("O que você gostaria de fazer?");
         System.out.println("1 - Exibir uma mensagem com seu nome e sua idade");

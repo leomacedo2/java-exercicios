@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class Ex06_Loops {
 
     public static void main(String[] args) {
+        System.out.println();
+        System.out.println();
         Scanner scanner = new Scanner(System.in);
         String resposta = "s";
         do {

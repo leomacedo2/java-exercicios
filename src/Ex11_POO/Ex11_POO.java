@@ -6,6 +6,8 @@ package Ex11_POO;
 public class Ex11_POO {
     
     public static void main(String[] args) {
+        System.out.println();
+        System.out.println();
 
         // Criando uma instância da classe Pessoa
         Pessoa pessoa1 = new Pessoa("Leo", 34);

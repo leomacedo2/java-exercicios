@@ -79,6 +79,8 @@ public class Ex08_Metodos {
 
 
     public static void main(String[] args) {
+        System.out.println();
+        System.out.println();
 
         Scanner scanner = new Scanner(System.in);
         DecimalFormat df = new DecimalFormat("#.############");

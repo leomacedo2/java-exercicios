@@ -8,6 +8,8 @@ public class Ex05_Condicionais {
     public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
+    System.out.println();
+    System.out.println();
     System.out.print("Digite um número inteiro de 1-7 para mostrar o dia da semana correspondente: ");
     String diainput = scanner.nextLine();
     if (!diainput.matches("\\d+")) {
