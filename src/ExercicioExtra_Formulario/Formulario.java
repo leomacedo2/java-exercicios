@@ -2,64 +2,114 @@
 package ExercicioExtra_Formulario;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Formulario {
 
     public static void main(String[] args) {
-        System.out.println();
-        System.out.println();
-        
+        SwingUtilities.invokeLater(() -> createAndShowGUI());
+    }
+
+    private static void createAndShowGUI() {
         JFrame frame = new JFrame("Formulário de Pessoa");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(350, 250);
-        frame.setLayout(null);
+        frame.setSize(380, 220);
+        frame.setLocationRelativeTo(null);
 
-        // Label nome
-        JLabel nomeLabel = new JLabel("Nome:");
-        nomeLabel.setBounds(30, 30, 80, 25);
-        frame.add(nomeLabel);
+        JPanel panel = new JPanel(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        c.insets = new Insets(6, 8, 6, 8);
+        c.fill = GridBagConstraints.HORIZONTAL;
 
-        // Campo nome
+        // Nome
+        c.gridx = 0;
+        c.gridy = 0;
+        c.weightx = 0;
+        panel.add(new JLabel("Nome:"), c);
+
         JTextField nomeField = new JTextField();
-        nomeField.setBounds(100, 30, 170, 25);
-        frame.add(nomeField);
+        c.gridx = 1;
+        c.gridy = 0;
+        c.weightx = 1.0;
+        panel.add(nomeField, c);
 
-        // Label idade
-        JLabel idadeLabel = new JLabel("Idade:");
-        idadeLabel.setBounds(30, 70, 80, 25);
-        frame.add(idadeLabel);
+        // Idade
+        c.gridx = 0;
+        c.gridy = 1;
+        c.weightx = 0;
+        panel.add(new JLabel("Idade:"), c);
 
-        // Campo idade
         JTextField idadeField = new JTextField();
-        idadeField.setBounds(100, 70, 40, 25);
-        frame.add(idadeField);
+        idadeField.setColumns(4);
+        c.gridx = 1;
+        c.gridy = 1;
+        c.weightx = 0.2;
+        panel.add(idadeField, c);
 
-        // Botão enviar
+        // Buttons panel
+        JPanel buttons = new JPanel(new FlowLayout(FlowLayout.RIGHT, 8, 0));
+        JButton limparButton = new JButton("Limpar");
         JButton enviarButton = new JButton("Enviar");
-        enviarButton.setBounds(100, 120, 100, 30);
-        frame.add(enviarButton);
+        buttons.add(limparButton);
+        buttons.add(enviarButton);
 
-        // Ação do botão
+        c.gridx = 0;
+        c.gridy = 2;
+        c.gridwidth = 2;
+        c.weightx = 0;
+        panel.add(buttons, c);
+
+        // Ações
+        limparButton.addActionListener(e -> {
+            nomeField.setText("");
+            idadeField.setText("");
+            nomeField.requestFocusInWindow();
+        });
+
         enviarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String nome = nomeField.getText();
+                String nome = nomeField.getText() != null ? nomeField.getText().trim() : "";
+                String idadeText = idadeField.getText() != null ? idadeField.getText().trim() : "";
+
+                // Validações
+                if (nome.isEmpty()) {
+                    JOptionPane.showMessageDialog(frame, "Por favor, insira o nome.", "Erro", JOptionPane.ERROR_MESSAGE);
+                    nomeField.requestFocusInWindow();
+                    return;
+                }
+                if (nome.length() > 50) {
+                    JOptionPane.showMessageDialog(frame, "Nome muito longo (máx. 50 caracteres).", "Erro", JOptionPane.ERROR_MESSAGE);
+                    nomeField.requestFocusInWindow();
+                    return;
+                }
+
                 int idade;
                 try {
-                    idade = Integer.parseInt(idadeField.getText());
+                    idade = Integer.parseInt(idadeText);
                 } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(frame, "Idade inválida. Por favor, insira um número.");
+                    JOptionPane.showMessageDialog(frame, "Idade inválida. Por favor, insira um número inteiro.", "Erro", JOptionPane.ERROR_MESSAGE);
+                    idadeField.requestFocusInWindow();
+                    return;
+                }
+                if (idade < 0 || idade > 150) {
+                    JOptionPane.showMessageDialog(frame, "Idade fora do intervalo esperado (0-150).", "Erro", JOptionPane.ERROR_MESSAGE);
+                    idadeField.requestFocusInWindow();
                     return;
                 }
 
                 Pessoa pessoa = new Pessoa(nome, idade);
-                JOptionPane.showMessageDialog(frame, "Pessoa criada:\n" + pessoa.apresentar());
+                int option = JOptionPane.showConfirmDialog(frame, "Pessoa criada:\n" + pessoa.apresentar() + "\n\nDeseja limpar os campos?", "Confirmação", JOptionPane.YES_NO_OPTION);
+                if (option == JOptionPane.YES_OPTION) {
+                    limparButton.doClick();
+                }
             }
         });
 
+        frame.getContentPane().add(panel);
         frame.setVisible(true);
     }
-    
+
 }
