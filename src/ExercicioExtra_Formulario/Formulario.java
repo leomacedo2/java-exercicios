@@ -1,4 +1,6 @@
 // Formulario.java
+// Formulario utilizando Label em Java
+
 package ExercicioExtra_Formulario;
 
 import javax.swing.*;
