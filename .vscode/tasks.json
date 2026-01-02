@@ -37,6 +37,25 @@
                 "clear": true 
             }, 
         "problemMatcher": [] 
+        },
+
+        {
+            "label": "Run Java POO2",
+            "type": "shell",
+            "command": "javac -d bin src\\Ex12_POO_Composicao\\*.java && java -cp bin Ex12_POO_Composicao.Main",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": { 
+                "echo": false, 
+                "reveal": "always", 
+                "focus": false, 
+                "panel": "shared", 
+                "showReuseMessage": false, 
+                "clear": true 
+            }, 
+        "problemMatcher": [] 
         }
     ] 
 } 
