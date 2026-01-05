@@ -20,7 +20,14 @@ public class Main {
 
         System.out.println("\nBuscando carro por nome 'Carro Sedan':");
         garagem.buscarCarroPorNome("Carro Sedan");
-        
+
+        System.out.println("\nTrocando motor do 'Carro Popular':");
+        Motor motorNovo = new Motor(150);
+        garagem.trocarMotorDoCarro("Carro Popular", motorNovo);
+
+
+        System.out.println("\nListando carros na garagem após troca de motor:");
+        garagem.listarCarros();
     }
 
 } 

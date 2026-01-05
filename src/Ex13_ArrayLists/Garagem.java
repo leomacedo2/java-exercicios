@@ -36,4 +36,15 @@ public class Garagem {
         System.out.println("Carro com nome " + nome + " não encontrado na garagem.");
     }
 
+    public void trocarMotorDoCarro(String nomeCarro, Motor novoMotor) {
+        for (Carro carro : carros) {
+            if (carro.getNome().equalsIgnoreCase(nomeCarro)) {
+                carro.trocarMotor(novoMotor);
+                return;
+            }
+        }
+        System.out.println(nomeCarro + " não encontrado na garagem.");
+    }
+
 }
+
