@@ -56,6 +56,25 @@
                 "clear": true 
             }, 
         "problemMatcher": [] 
+        },
+
+        {
+            "label": "Run Java POO3",
+            "type": "shell",
+            "command": "javac -d bin src\\Ex13_ArrayLists\\*.java && java -cp bin Ex13_ArrayLists.Main",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": { 
+                "echo": false, 
+                "reveal": "always", 
+                "focus": false, 
+                "panel": "shared", 
+                "showReuseMessage": false, 
+                "clear": true 
+            }, 
+        "problemMatcher": [] 
         }
     ] 
 } 

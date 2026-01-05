@@ -25,4 +25,7 @@ class Carro {
         System.out.println("Novo motor de " + novoMotor.getPotencia() + " de potencia foi trocado para o " +nome);
     }
 
+    public String getNome() {
+        return nome;
+    }
 }
