@@ -17,6 +17,12 @@
                 "showReuseMessage": false, 
                 "clear": true 
             }, 
+            "options": {
+                "shell": {
+                "executable": "cmd.exe",
+                    "args": ["/c"]
+                }
+            },
         "problemMatcher": [] 
         },
 
