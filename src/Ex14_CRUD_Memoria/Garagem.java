@@ -1,3 +1,6 @@
+// Garagem.java
+// Objeto que gerencia uma coleção de Carros
+
 package Ex14_CRUD_Memoria;
 
 import java.util.ArrayList;
