@@ -1,3 +1,7 @@
+/**
+ * Gerencia uma coleção de Carros em uma garagem.
+ * Fornece operações para adicionar, remover e listar carros.
+ */
 package Ex13_ArrayLists;
 
 import java.util.ArrayList;

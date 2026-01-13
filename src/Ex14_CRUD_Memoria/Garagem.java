@@ -1,5 +1,7 @@
-// Garagem.java
-// Objeto que gerencia uma coleção de Carros
+/**
+ * Gerencia uma coleção de Carros em uma garagem.
+ * Fornece operações para adicionar, remover e listar carros.
+ */
 
 package Ex14_CRUD_Memoria;
 
