@@ -1,6 +1,6 @@
-// Motor.java
-// Objeto simples que representa um Motor
-
+/* Motor.java
+ * Representa um motor de carro com funcionalidade básica.
+ */
 package Ex13_ArrayLists;
 
 class Motor {
