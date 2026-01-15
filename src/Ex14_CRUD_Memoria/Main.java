@@ -9,6 +9,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int opcao = -1;
 
+        Garagem garagem = new Garagem();
+
+
         while(opcao != 0) {
             System.out.println("\nMenu de CRUD de Carros:");
             System.out.println("1. Adicionar Carro");
@@ -24,6 +27,14 @@ public class Main {
             switch(opcao) {
                 case 1:
                     // Código para adicionar carro
+                    System.out.print("Digite o nome do carro: ");
+                    String nomeCarro = scanner.nextLine();
+                    System.out.print("Digite a potência do motor: ");
+                    int potenciaMotor = scanner.nextInt();
+                    Motor motor = new Motor(potenciaMotor);
+                    Carro novoCarro = new Carro(nomeCarro, motor);
+                    // Adicionar o carro à garagem
+                    garagem.adicionarCarro(novoCarro);
                     break;
                 case 2:
                     // Código para listar carros
@@ -44,33 +55,6 @@ public class Main {
             }
         }
         scanner.close();
-
-        Motor motorFraco = new Motor(100);
-        Motor motorMedio = new Motor(200);
-        Motor motorForte = new Motor(300);
-
-        Carro carroPopular = new Carro("Carro Popular", motorFraco);
-        Carro carroSedan = new Carro("Carro Sedan", motorMedio);
-        Carro carroEsportivo = new Carro("Carro Esportivo", motorForte);
-
-        Garagem garagem = new Garagem();
-        garagem.adicionarCarro(carroPopular);
-        garagem.adicionarCarro(carroSedan);
-        garagem.adicionarCarro(carroEsportivo);
-
-        System.out.println("\nListando carros na garagem:");
-        garagem.listarCarros();
-
-        System.out.println("\nBuscando carro por nome 'Carro Sedan':");
-        garagem.buscarCarroPorNome("Carro Sedan");
-
-        System.out.println("\nTrocando motor do 'Carro Popular':");
-        Motor motorNovo = new Motor(150);
-        garagem.trocarMotorDoCarro("Carro Popular", motorNovo);
-
-
-        System.out.println("\nListando carros na garagem após troca de motor:");
-        garagem.listarCarros();
     }
 
 } 
