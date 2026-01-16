@@ -38,6 +38,7 @@ public class Main {
                     break;
                 case 2:
                     // Código para listar carros
+                    garagem.listarCarros();
                     break;
                 case 3:
                     // Código para buscar carro por nome
