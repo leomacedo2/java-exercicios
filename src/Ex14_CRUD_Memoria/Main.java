@@ -33,7 +33,7 @@ public class Main {
                     int potenciaMotor = scanner.nextInt();
                     Motor motor = new Motor(potenciaMotor);
                     Carro novoCarro = new Carro(nomeCarro, motor);
-                    // Adicionar o carro à garagem
+                    // Adicionar o carro à garagem.
                     garagem.adicionarCarro(novoCarro);
                     break;
                 case 2:
