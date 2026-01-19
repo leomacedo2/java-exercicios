@@ -42,6 +42,9 @@ public class Main {
                     break;
                 case 3:
                     // Código para buscar carro por nome
+                    System.out.print("Digite o nome do carro a buscar: ");
+                    String nomeBusca = scanner.nextLine();
+                    garagem.buscarCarroPorNome(nomeBusca);
                     break;
                 case 4:
                     // Código para trocar motor do carro
