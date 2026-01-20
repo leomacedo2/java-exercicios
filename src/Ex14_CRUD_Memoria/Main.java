@@ -48,6 +48,12 @@ public class Main {
                     break;
                 case 4:
                     // Código para trocar motor do carro
+                    System.out.print("Digite o nome do carro para trocar o motor: ");
+                    String nomeTroca = scanner.nextLine();
+                    System.out.print("Digite a nova potência do motor: ");
+                    int novaPotencia = scanner.nextInt();
+                    Motor novoMotor = new Motor(novaPotencia);
+                    garagem.trocarMotorDoCarro(nomeTroca, novoMotor);
                     break;
                 case 5:
                     // Código para remover carro
