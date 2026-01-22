@@ -57,6 +57,10 @@ public class Main {
                     break;
                 case 5:
                     // Código para remover carro
+                    System.out.print("Digite o nome do carro a remover: ");
+                    String nomeRemover = scanner.nextLine();
+                    garagem.removerCarro(nomeRemover);
+                    break;
                 case 0:
                     System.out.println("Saindo...");
                     break;
