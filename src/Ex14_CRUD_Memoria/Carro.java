@@ -1,7 +1,6 @@
+package Ex14_CRUD_Memoria;
 // Carro.java
 // Objeto simples que representa um Carro
-
-package Ex14_CRUD_Memoria;
 
 class Carro {
     private String nome;

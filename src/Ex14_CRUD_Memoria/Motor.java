@@ -1,7 +1,7 @@
+package Ex14_CRUD_Memoria;
+
 // Motor.java
 // Objeto simples que representa um Motor
-
-package Ex14_CRUD_Memoria;
 
 class Motor {
     private int potencia;

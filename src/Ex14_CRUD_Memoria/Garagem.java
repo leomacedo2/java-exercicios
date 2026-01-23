@@ -1,9 +1,9 @@
+package Ex14_CRUD_Memoria;
+
 /**
  * Gerencia uma coleção de Carros em uma garagem.
  * Fornece operações para adicionar, remover e listar carros.
  */
-
-package Ex14_CRUD_Memoria;
 
 import java.util.ArrayList;
 
@@ -45,6 +45,7 @@ public class Garagem {
         for (int i = 0; i < carros.size(); i++) {
             if (carros.get(i).getNome().equalsIgnoreCase(nomeCarro)) {
                 carros.remove(i);
+
                 System.out.println(nomeCarro + " removido da garagem.");
                 return;
             }
