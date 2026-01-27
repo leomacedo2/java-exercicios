@@ -31,6 +31,7 @@ public class Main {
                     String nomeCarro = scanner.nextLine();
                     System.out.print("Digite a potência do motor: ");
                     int potenciaMotor = scanner.nextInt();
+                    scanner.nextLine(); // Consumir a nova linha
                     Motor motor = new Motor(potenciaMotor);
                     Carro novoCarro = new Carro(nomeCarro, motor);
                     // Adicionar o carro à garagem
@@ -52,6 +53,7 @@ public class Main {
                     String nomeTroca = scanner.nextLine();
                     System.out.print("Digite a nova potência do motor: ");
                     int novaPotencia = scanner.nextInt();
+                    scanner.nextLine(); // Consumir a nova linha
                     Motor novoMotor = new Motor(novaPotencia);
                     garagem.trocarMotorDoCarro(nomeTroca, novoMotor);
                     break;
