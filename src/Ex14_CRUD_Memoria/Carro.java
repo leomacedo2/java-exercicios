@@ -1,8 +1,11 @@
 package Ex14_CRUD_Memoria;
-// Carro.java
-// Objeto simples que representa um Carro
+/**
+ * Carro.java
+ * Objeto simples que representa um Carro
+ */
 
-class Carro {
+
+public class Carro {
     private String nome;
     private Motor motor;
 
