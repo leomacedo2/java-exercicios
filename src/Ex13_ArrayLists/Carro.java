@@ -1,7 +1,10 @@
-// Carro.java
-// Objeto simples que representa um Carro
-
 package Ex13_ArrayLists;
+
+/**
+ * Carro.java
+ * Objeto simples que representa um Carro
+ */
+
 
 class Carro {
     private String nome;
